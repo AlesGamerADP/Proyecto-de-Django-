@@ -1,38 +1,48 @@
-💻 My Django Project
-A modern Django web application with a clean, organized structure.
+# Mi Proyecto Django
 
-📃 Overview
-This project follows a custom structure:
+Una aplicación web moderna en Django con una estructura limpia y organizada.
 
-src/: Main code directory
-config/: Project configuration
-core/: Main application
-venv/: Virtual environment (not tracked in git)
-🔍 Prior Requirements
-Python >= 3.7
-Any text editor
-🔧 Instalation
-Follow these steps to create a project using Django:
+## 📝 Descripción
 
-Clone this repository
+Este proyecto sigue una estructura personalizada de directorios:
 
-Create and activate virtual environment
 
-python -m venv venv
-.\venv\Scripts\activate
-If .\venv\Scripts\activate use this code first Set-ExecutionPolicy Unrestricted -Scope Process. This allows the use of scripts in the system.
+## 🔍 Requisitos previos
 
-Install dependencies
+- Python >= 3.7
+- Cualquier editor de texto (VSCode, PyCharm, Sublime Text, etc.)
 
+## 🔧 Instalación
+
+Sigue estos pasos para configurar el proyecto:
+
+### 1. Clonar el repositorio
+
+git clone <url_del_repositorio>
+
+cd <nombre_del_repositorio>  
+
+
+
+### 2. Crear y activar el entorno virtual
+python3 -m venv venv
+
+source venv/bin/activate
+
+### 3. Instalar las dependencias
 cd src
+
 pip install -r requirements.txt
-Apply migrations
 
+### 4. Aplicar las migraciones de la base de datos
 python manage.py migrate
-Create a superuser
 
+### 5. Crear un superusuario
 python manage.py createsuperuser
-🚀 Running the project
-    cd src
-    python manage.py runserver
-Access the site at http://127.0.0.1:8000/ and admin at http://127.0.0.1:8000/admin/
+
+### 6. Ejecutar el servidor
+cd src
+
+python manage.py runserver
+
+http://127.0.0.1:8000/
