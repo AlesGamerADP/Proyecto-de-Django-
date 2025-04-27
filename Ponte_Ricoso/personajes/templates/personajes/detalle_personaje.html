@@ -1,0 +1,28 @@
+{% extends 'personajes/base.html' %}
+
+{% block title %}Detalle de {{ personaje.nombre }}{% endblock %}
+
+{% block content %}
+<h1>Detalle de {{ personaje.nombre }}</h1>
+<div class="detalle">
+    <div class="detalle-contenido">
+        <img class="detalle-img" src="{{ personaje.imagen }}" alt="{{ personaje.nombre }}">
+        <div class="detalle-info">
+            <p><strong>Estado:</strong> {{ personaje.get_estado_display }}</p>
+            <p><strong>Especie:</strong> {{ personaje.especies }}</p>
+            <p><strong>Género:</strong> {{ personaje.get_genero_display }}</p>
+            <p><strong>Origen:</strong> {{ personaje.origen }}</p>
+            <p><strong>Ubicación:</strong> {{ personaje.ubicacion }}</p>
+            <p><strong>URL:</strong> <a href="{{ personaje.URL }}" target="_blank">{{ personaje.URL }}</a></p>
+            <p><strong>Creado:</strong> {{ personaje.created }}</p>
+
+            <div class="detalle-acciones">
+                <a class="btn editar" href="{% url 'editar_personaje' personaje.pk %}">Editar</a>
+                <a class="btn eliminar" href="{% url 'eliminar_personaje' personaje.pk %}">Eliminar</a>
+                <a class="btn volver" href="{% url 'lista_personajes' %}">Volver</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

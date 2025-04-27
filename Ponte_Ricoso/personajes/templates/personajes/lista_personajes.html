@@ -1,0 +1,32 @@
+{% extends 'personajes/base.html' %}
+
+{% block title %}Lista de Personajes{% endblock %}
+
+{% block content %}
+<h1>Lista de Personajes</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Especie</th>
+            <th>Género</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for personaje in personajes %}
+        <tr>
+            <td>{{ personaje.nombre }}</td>
+            <td>{{ personaje.get_estado_display }}</td>
+            <td>{{ personaje.especies }}</td>
+            <td>{{ personaje.get_genero_display }}</td>
+            <td class="acciones">
+                <a class="btn ver" href="{% url 'detalle_personaje' personaje.pk %}">Ver</a>
+                <a class="btn editar" href="{% url 'editar_personaje' personaje.pk %}">Editar</a>
+                <a class="btn eliminar" href="{% url 'eliminar_personaje' personaje.pk %}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

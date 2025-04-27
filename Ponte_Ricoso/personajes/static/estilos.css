@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/static/bañito.jpg");
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 1em 0;
+    display: block;
+}
+
+nav {
+    background: rgba(13, 27, 42, 1);
+    padding: 1em 2em;
+    display: flex;
+    justify-content: left;
+    gap: 2em;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.content {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+}
+
+form {
+    margin: 1.5em auto;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+form input[type="text"],
+form input[type="url"],
+form input[type="email"],
+form input[type="number"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+form a {
+    margin-left: 1em;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 1em;
+    text-align: center;
+    border: none;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.btn {
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: white;
+    display: inline-block;
+}
+
+.btn-t{
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: white;
+    display: inline-block;
+    background-color: #FF1493;
+}
+
+
+.btn.ver       { background-color: #00FF00; }
+.btn.editar    { background-color: #00BFFF; }
+.btn.eliminar  { background-color: #e74c3c; }
+.btn.volver    { background-color: #FFCC00; }
+.btn.cancelar  { background-color: #FFCC00; }
+
+
+.detalle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    min-height: 80vh;
+}
+
+.detalle-contenido {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    padding: 2em;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    text-align: center;
+}
+
+.detalle-img {
+    max-width: 250px;
+    border-radius: 12px;
+}
+
+.detalle-info {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    padding: 0 1em;
+}
+
+.detalle-acciones {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+footer {
+    background-color: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content,
+    form {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    table th,
+    table td {
+        padding: 0.5em;
+    }
+}

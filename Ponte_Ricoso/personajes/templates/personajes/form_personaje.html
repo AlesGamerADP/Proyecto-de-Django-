@@ -1,0 +1,22 @@
+{% extends 'personajes/base.html' %}
+
+{% block title %}Crear Personaje{% endblock %}
+
+{% block content %}
+<h2>{% if form.instance.pk %}Editar{% else %}Crear{% endif %} Personaje</h2>
+
+<form method="GET" action="{% url 'crear_personaje' %}">
+    <label for="buscar">Buscar Personaje </label>
+    <input type="text" id="buscar" name="buscar" value="{{ request.GET.buscar }}">
+    <button type="submit" class="btn-t">Buscar</button>
+</form>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn-t">Guardar</button>
+    <a class="btn cancelar" href="{% url 'lista_personajes' %}">Cancelar</a>
+</form>
+
+{% endblock %}

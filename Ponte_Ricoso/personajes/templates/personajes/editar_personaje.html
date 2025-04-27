@@ -1,0 +1,15 @@
+{% extends 'personajes/base.html' %}
+
+{% block title %}Editar {{ personaje.nombre }}{% endblock %}
+
+{% block content %}
+  <h1>Editar Personaje: {{ personaje.nombre }}</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn-t">Guardar cambios</button>
+    <a href="{% url 'lista_personajes' %}" class="btn volver">Volver</a>
+  </form>
+
+{% endblock %}
