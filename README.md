@@ -18,31 +18,36 @@ Sigue estos pasos para configurar el proyecto:
 
 ### 1. Clonar el repositorio
 
-git clone <url_del_repositorio>
-
-cd <nombre_del_repositorio>  
-
-
+    git clone <url_del_repositorio>
+    
+    cd <nombre_del_repositorio>  
+    
 
 ### 2. Crear y activar el entorno virtual
-python3 -m venv venv
 
-source venv/bin/activate
+    python3 -m venv venv
+    
+    source venv/bin/activate
 
 ### 3. Instalar las dependencias
-cd src
 
-pip install -r requirements.txt
+    cd src
+    
+    pip install -r requirements.txt
 
 ### 4. Aplicar las migraciones de la base de datos
-python manage.py migrate
+
+    python manage.py migrate
 
 ### 5. Crear un superusuario
-python manage.py createsuperuser
+
+    python manage.py createsuperuser
 
 ### 6. Ejecutar el servidor
-cd src
+    cd src
+    
+    python manage.py runserver
 
-python manage.py runserver
+Local: http://127.0.0.1:8000/
 
-http://127.0.0.1:8000/
+Admin: http://127.0.0.1:8000/admin/
